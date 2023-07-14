@@ -7,15 +7,14 @@
 
 
 fn main() {
-    let vec0 = Vec::new();
-
-    let mut vec1 = fill_vec();
+    let vec1 = fill_vec();
 
     println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
 
-    vec1.push(88);
+    let mut vec2 = vec1.clone(); // Create a mutable copy of vec1
+    vec2.push(88);
 
-    println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
+    println!("{} has length {} content `{:?}`", "vec2", vec2.len(), vec2);
 }
 
 fn fill_vec() -> Vec<i32> {
